@@ -43,8 +43,8 @@ def cont_sql(input_ip='39.103.183.155', input_port=3306, input_user='root', inpu
 
 
 # login session
-@app.route('/login', methods=['POST'])
-
+# - for user login
+@app.route('/login/user', methods=['POST'])
 def login():
     if request.method == 'POST':
         rq = request.json
