@@ -1,6 +1,6 @@
 HOST = '39.103.183.155'
-PORT = '3306'
-DATABASE = 'event'
+PORT = 3306
+DATABASE = 'user'
 USERNAME = 'root'
 PASSWORD = 'xx3721xx'
 DB_URI = "mysql+pymysql://{username}:{password}@{host}:{port}/{db}?charset=utf8".format(username=USERNAME, password=PASSWORD, host=HOST, port=PORT, db=DATABASE)
