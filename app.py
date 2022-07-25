@@ -5,6 +5,7 @@ from requests import *
 import pymysql
 from flask import Flask, render_template, request, url_for,make_response
 from flask import Flask, url_for, request, redirect, render_template
+from flask_cors import CORS, cross_origin
 
 
 #from flask_mysqldb import MySQL
@@ -43,8 +44,9 @@ def cont_sql(input_ip='39.103.183.155', input_port=3306, input_user='root', inpu
 
 
 # login session
-@app.route('/login', methods=['POST'])
-
+# - for user login
+@app.route('/login/user', methods=['POST'])
+@cross_origin()  # allow all origins access, or specify the origin like @cross_origin(origin=['http://...'])
 def login():
     if request.method == 'POST':
         rq = request.json
